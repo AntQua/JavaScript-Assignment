@@ -28,12 +28,6 @@
       Example: startGame();
 
 - 
-=======
-- 
-- 
-- 
-
->>>>>>> Stashed changes
 
 ## Provided Assignment Rules
 
