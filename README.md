@@ -13,6 +13,7 @@
 
 ### Naming Conventions
 
+<<<<<<< Updated upstream
 - Global Variables
     Use UperCase for const 
       Example:
@@ -27,6 +28,12 @@
       Example: startGame();
 
 - 
+=======
+- 
+- 
+- 
+
+>>>>>>> Stashed changes
 
 ## Provided Assignment Rules
 
