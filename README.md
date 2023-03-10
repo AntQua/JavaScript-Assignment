@@ -14,18 +14,19 @@
 ### Naming Conventions
 
 - Global Variables
-    - Use UpperCase for const:     
+  - Use UpperCase for const:  
       Example:  
         `const ROCK = 'ROCK';`  
         `const ROUND_RESULT_DRAW = 'DRAW';`  
 
-    - Use camelCase for let variables:  
+  - Use camelCase for let variables:  
       Example:  
-        `let playerName;`  
+        `let playerName;`
 
-- Functions : Use camelCase:  
+  - Functions: Use camelCase:  
       Example: 
         `startGame();`
+- 
 
 
 ## Provided Assignment Rules
@@ -52,5 +53,5 @@
 1.  **Rock Beats Scissors**
 2.  **Scissors Beats Paper**  
 3.  **Paper Beats Rock**
-4.  **It's a Tie!**
+4.  **It's a Draw!**
 
