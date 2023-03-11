@@ -4,7 +4,6 @@ const ROCK = 'ROCK';
 const PAPER = 'PAPER';
 const SCISSORS = 'SCISSORS';
 const DEFAULT_PLAYER_SELECTION = ROCK;
-const DEFAULT_PLAYER_NAME = 'PLAYER';
 const ROUND_RESULT_DRAW = "It's a draw! 😐";
 const ROUND_RESULT_PLAYER_WINS = 'Yay! You win! 🥳';
 const ROUND_RESULT_COMPUTER_WINS = 'You lost! 😭';
@@ -51,18 +50,15 @@ const getPlayerName = () => {
   playerName = prompt(
     '😀 Welcome to Rock, Paper, Scissors!\nPlease enter your name:'
   );
-  // set name to lowercase first
-  playerName = playerName.toLowerCase();
-  // then capitalise the 1st letter
-  playerName = playerName.charAt(0).toUpperCase() + playerName.slice(1);
-
-  if (!playerName) {
-    console.log(
-      `⚠ Invalid choice! We choose ${DEFAULT_PLAYER_NAME} name for you!`
-    );
-    alert(`⚠ Invalid choice! We choose ${DEFAULT_PLAYER_NAME} name for you!`);
-    return (playerName = DEFAULT_PLAYER_NAME);
+  if((playerName == null ) || (playerName.trim() == "")) {
+      alert("Name cannot be empty! Please try again.");
+      getPlayerName();
   }
+  else
+  // set name to lowercase first
+    playerName = playerName.toLowerCase().trim();
+  // then capitalise the 1st letter
+    playerName = playerName.charAt(0).toUpperCase() + playerName.slice(1);
   return playerName;
 };
 
@@ -71,7 +67,8 @@ const getPlayerSelection = () => {
   const playerSelection = prompt(
     `${roundCounter}:\nChoose ${ROCK}, ${PAPER} or ${SCISSORS}`,
     ''
-  ).toUpperCase();
+  ).toUpperCase().trim();
+
   if (
     playerSelection !== ROCK &&
     playerSelection !== PAPER &&
@@ -88,8 +85,7 @@ const getPlayerSelection = () => {
 
 // GET COMPUTER CHOICE
 const computerPlay = () => {
-  for (i = 0; i < 3; i++) {
-    const randomValue = Math.floor(Math.random() * 3);
+    const randomValue = Math.floor(Math.random());
     if (randomValue === 0) {
       return ROCK;
     } else if (randomValue === 1) {
@@ -97,7 +93,7 @@ const computerPlay = () => {
     } else {
       return SCISSORS;
     }
-  }
+  
 };
 
 // LOGIC TO PLAY A SINGLE ROUND
