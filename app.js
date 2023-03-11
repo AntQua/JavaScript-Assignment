@@ -85,7 +85,7 @@ const getPlayerSelection = () => {
 
 // GET COMPUTER CHOICE
 const computerPlay = () => {
-    const randomValue = Math.floor(Math.random());
+    const randomValue = Math.floor(Math.random()*3);
     if (randomValue === 0) {
       return ROCK;
     } else if (randomValue === 1) {
