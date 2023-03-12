@@ -1,5 +1,7 @@
 # JavaScript Assignment
   ‘Rock’, ‘Paper’ or ‘Scissors’  Game
+  
+[GitHub Page](https://antqua.github.io/JavaScript-Assignment/)
 
 ## Important - all devs to use the following:
 
